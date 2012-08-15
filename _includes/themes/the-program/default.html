@@ -20,13 +20,10 @@
 			<div class="unit-inner unit-head-inner">
 				<nav class="nav-global">
 					<ul>
-						<li class="logo"><a href="/">{{ site.title }}</a></li>
-						<li class="archive"><a href="/archive.html">archive</a></li>
-						<li class="page"><a href="/pages.html">pages</a></li>
-						<li class="category"><a href="/categories.html">categories</a></li>
-						<li class="tag"><a href="/tags.html">tags</a></li>
-						<li class="forkme"><div><iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=plusjade&repo=jekyll-bootstrap&type=fork&count=true"
-									allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe></div></li>
+						<li class="logo"><a href="{{ HOME_PATH }}">{{ site.title }}</a></li>
+						{% assign pages_list = site.pages %}
+						{% assign group = 'navigation' %}
+						{% include JB/pages_list %}
 					</ul>
 				</nav>
 			</div><!-- unit-inner -->
